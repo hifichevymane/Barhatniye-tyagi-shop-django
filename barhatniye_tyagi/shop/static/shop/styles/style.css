@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+* {
+    font-family: 'Comfortaa', cursive;
+}
+
+.navbar {
+    background-color: rgb(240, 178, 255);
+}
+
+.btn-success {
+    background-color: rgb(100, 237, 118);
+    color: rgb(0, 0, 0);
+}
+
+.btn-primary {
+    background-color: #ACD0FA;
+    color: rgb(0, 0, 0);
+}
+
+.img-size {
+    width: 2em;
+}
+
+.footer-color {
+    background-color: rgb(240, 178, 255);
+}
+
+.avatar {
+    width: 400px;
+}

@@ -1,0 +1,13 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+
+{% block main %}
+<div class="container-fluid my-4">
+    <div class="row my-4">
+        <div class="col-lg-12 d-flex flex-column align-items-center">
+            <h1 class="fw-bold">Спасибо за отзыв!</h1>
+            <p class="fs-3">Чтобы вернуться на главную страницу нажмите <a href="{% url 'shop:home' %}">сюда</a></p>
+        </div>
+    </div>
+</div>
+{% endblock main %}

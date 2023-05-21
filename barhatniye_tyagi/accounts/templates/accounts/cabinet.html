@@ -1,0 +1,83 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+
+{% block main %}
+    <!-- account data section starts -->
+    <div class="container-fluid">
+        <div class="row my-5 mx-5">
+            <!-- account avatar section starts -->
+            <div class="col-lg-6 col-md-6 text-center">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <img src="{{ request.user.avatar.url }}" class="img-fluid rounded avatar" alt="avatar">
+                    </div>
+                    <div class="col-lg-12">
+                        <a href="" class="btn btn-success my-3">Изменить информацию об аккаунте</a>
+                    </div>
+                </div>
+            </div>
+            <!-- account avatar section ends -->
+
+            <!-- user data section starts -->
+            <div class="col-lg-6 col-md-6">
+                <div class="row my-3">
+                    <div class="col-lg-12">
+                        <h2 class="fw-bold">Ваш аккаунт</h2>
+                    </div>
+                    <div class="col-lg-12 mt-3">
+                        <h3 class="d-inline fw-bold">Имя: </h3>
+                        <h3 class="d-inline">{{ request.user.first_name }}</h3>
+                    </div>
+                    <div class="col-lg-12 mt-3">
+                        <h3 class="d-inline fw-bold">Фамилия: </h3>
+                        <h3 class="d-inline">{{ request.user.last_name }}</h3>
+                    </div>
+                    <div class="col-lg-12 mt-3">
+                        <h3 class="d-inline fw-bold">Телефон: </h3>
+                        <h3 class="d-inline">{{ request.user.phone_number }}</h3>
+                    </div>
+                    <div class="col-lg-12 mt-3">
+                        <h3 class="d-inline fw-bold">Электроная почта: </h3>
+                        <h3 class="d-inline">{{ request.user.email }}</h3>
+                    </div>
+                </div>
+            </div>
+            <!-- user account section ends -->
+
+            <!-- order history section starts -->
+            <div class="col-lg-12 mt-5">
+                <h2 class="text-center fw-bold">История заказов</h2>
+            </div>
+            <div class="col-lg-12 text-center d-flex justify-content-center">
+                <table class="table table-hover">
+                    <tr>
+                        <th>№</th>
+                        <th>Статус</th>
+                        <th>Стоимость</th>
+                        <th>Детали</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Завершен</td>
+                        <td>156₴</td>
+                        <td><a href="#" class="btn btn-success">Детали</a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Завершен</td>
+                        <td>256₴</td>
+                        <td><a href="#" class="btn btn-success">Детали</a></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Завершен</td>
+                        <td>600₴</td>
+                        <td><a href="#" class="btn btn-success">Детали</a></td>
+                    </tr>
+                </table>
+            </div>
+            <!-- order history section ends -->
+        </div>
+    </div>
+    <!-- account section ends -->
+{% endblock main %}

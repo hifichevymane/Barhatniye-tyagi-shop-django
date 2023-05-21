@@ -1,0 +1,27 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block main %}
+<div class="container-fluid d-flex justify-content-center">
+    <div class="row my-5">
+        <div class="col-lg-12 text-center align-items-center">
+            <h1>Зарегестрируйтесь чтобы очутится в мире бархатных тяг!</h1>
+        </div>
+        <div class="col-lg-12 justify-content-evenly d-flex flex-column">
+            <form method='post'>
+                {% csrf_token %}
+                {% for f in form %}
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">{{ f.label }}</label>
+                    {{ f }}
+                    <div class='form-error'>{{ f.errors }}</div>
+                </div>
+                {% endfor %}
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <div class="col-lg-12 d-flex justify-content-evenly">
+                <a class="text-center" href="{% url 'accounts:login' %}">Уже есть аккаунт?</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main %}
