@@ -42,6 +42,8 @@ class ProductsCategoryListView(ListView):
 # Страница карточки товара
 class CardDetailView(DetailView):
     model = Product
+    # Define slug field
+    slug_field = 'slug'
 
 
 # About page

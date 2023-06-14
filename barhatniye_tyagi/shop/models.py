@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils.text import slugify
-
+from django.urls import reverse
 
 # Create your models here.
 
@@ -13,6 +13,10 @@ class Category(models.Model):
     class Meta:
         verbose_name = 'Category'
         verbose_name_plural = 'Categories'
+
+    # Making URL path for model object for slug
+    def get_absolute_url(self):
+        return reverse("card", kwargs={"slug": self.slug})
 
     def __str__(self):
         return f"{self.name} - {self.slug}"
