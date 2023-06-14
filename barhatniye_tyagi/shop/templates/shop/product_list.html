@@ -21,7 +21,7 @@
                                 <h5 class="card-title">{{ product.name }}</h5>
                                 <p class="card-text">{{ product.short_description }}</p>
                                 <p class="fw-bold fs-4">{{ product.price }} ₴</p>
-                                <a href="{% url 'shop:card' product.id %}" class="btn btn-success">Купить</a>
+                                <a href="{% url 'shop:card' product.slug %}" class="btn btn-success">Купить</a>
                             </div>
                         </div>
                     </div>
